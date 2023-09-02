@@ -1,6 +1,6 @@
 ## DESCRIPTION
 
-A simple hexdump program, it accepts format specifications
+A simple hexdump program, it accepts format specifications such as
 
 ```js
     -af: Address Format
@@ -15,7 +15,9 @@ A simple hexdump program, it accepts format specifications
 ```
     -af "%04X " -bf "%02X " -cf " |%s|" -rs 16 -gs 8
 ```
+
 Outputs:
+
 ```
     0000  4C 6F 72 65 6D 20 69 70  73 75 6D 20 64 6F 6C 6F  |Lorem ipsum dolo|
     0010  72 20 73 69 74 20 61 6D  65 74 2C 20 63 6F 6E 73  |r sit amet, cons|
@@ -26,3 +28,7 @@ Outputs:
     0060  6F 72 65 20 65 74 20 64  6F 6C 6F 72 65 20 6D 61  |ore et dolore ma|
     0070  67 6E 61 20 61 6C 69 71  75 61 2E                 |gna aliqua.|
 ```
+
+## LIMITATIONS
+
+* Its best to keep byte formatting as 2 digits hex or the spacing could be off. A simple workaround might be formatting the characters `-cf ""` not printing them.
